@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundColor: {
+                        color: "var(--background)",
+                        content: "var(--content)",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <section class="min-h-screen flex items-center justify-center bg-content">
+        <button id="togglebtn"
+            class="text-white bg-black theme_btn border-white py-2 px-6 text-lg font-semibold rounded-lg">Toggle
+            Theme</button>
+    </section>
+    <script>
+        document.getElementById("togglebtn").addEventListener("click", function () {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            if (currentTheme === "dark") {
+                document.documentElement.setAttribute("data-theme", "orange");
+            } else if (currentTheme === "orange") {
+                document.documentElement.setAttribute("data-theme", "blue");
+            } else if (currentTheme === "blue") {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+        });
+    </script>
+</body>
+
+</html>

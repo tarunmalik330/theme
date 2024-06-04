@@ -1,0 +1,23 @@
+.theme_btn {
+    border: 1px solid white;
+}
+
+:root {
+    --background: #000000;
+    --content: #ffffff;
+}
+
+[data-theme='orange'] {
+    --background: #FFA500;
+    --content: #000000;
+}
+
+[data-theme='blue'] {
+    --background: #0000FF;
+    --content: #a4e31b;
+}
+
+[data-theme='dark'] {
+    --background: #0b9df2;
+    --content: #0d95de;
+}
